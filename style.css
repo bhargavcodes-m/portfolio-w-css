@@ -1,0 +1,90 @@
+/* General Reset & Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #e6f0f9, #f9fcff); /* soft calming gradient */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Links */
+a {
+    color: #3d6cb9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #01594a;
+    transform: scale(1.1);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+/* Profile Photo Bounce */
+img {
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #ffffff; /* soft border */
+}
+
+.bouncing-photo {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Section Styling */
+section, .fade-in-section {
+    background: #ffffffcc; /* soft translucent white */
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Fade In Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-section:nth-of-type(1) { animation-delay: 0s; }
+.fade-in-section:nth-of-type(2) { animation-delay: 0.5s; }
+.fade-in-section:nth-of-type(3) { animation-delay: 1s; }
+.fade-in-section:nth-of-type(4) { animation-delay: 1.5s; }
+
+/* Skill Cards Hover Effect */
+.skill-group, ul li {
+    background: #f5f9fc;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.skill-group:hover,
+ul li:hover {
+    background-color: #e0f4f1; /* calm teal-blue */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
